@@ -44,7 +44,7 @@ const locationSchema = z
 
 export const createJobSchema = z
   .object({
-    title: z.string().max(100),
+    title: requiredString.max(100),
     type: requiredString.refine(
       (value) => jobTypes.includes(value),
       "Invalid location type",
