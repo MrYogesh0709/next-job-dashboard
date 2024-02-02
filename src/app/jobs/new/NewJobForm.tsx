@@ -53,6 +53,7 @@ const NewJobForm = () => {
         formData.append(key, value);
       }
     });
+    //! with try & catch we get error else next-js-server doesn't send error message to the frontend to avoid leaking data from server error message
     try {
       await createJobPosting(formData);
     } catch (error) {

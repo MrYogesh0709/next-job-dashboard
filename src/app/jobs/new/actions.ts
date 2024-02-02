@@ -9,6 +9,7 @@ import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 
 //! we must must need FormData due to companyLogo else server won't accept it
+//! here we didn't have try catch and in frontend i used there but due to this i can't set error as server response it's done in admin actions
 export async function createJobPosting(formData: FormData) {
   const values = Object.fromEntries(formData.entries());
 
