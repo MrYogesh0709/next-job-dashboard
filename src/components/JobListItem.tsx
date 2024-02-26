@@ -51,7 +51,6 @@ export default function JobListItem({
           <p className="flex items-center gap-1.5">
             <Banknote size={16} className="shrink-0" />
             {formatMoney(salary)}
-            {salary}
           </p>
           <p className="flex items-center gap-1.5 sm:hidden">
             <Clock size={16} className="shrink-0" />
